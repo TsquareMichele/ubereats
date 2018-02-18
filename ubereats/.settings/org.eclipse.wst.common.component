@@ -4,6 +4,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <dependent-module archiveName="ubereatsbackend-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ubereatsbackend/ubereatsbackend">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ubereats"/>
         <property name="java-output-path" value="/ubereats/target/classes"/>
     </wb-module>

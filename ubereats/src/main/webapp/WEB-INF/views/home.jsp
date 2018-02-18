@@ -6,13 +6,9 @@
 		<br/>
 		<br/>
 		<br/>
-          <h1 class="my-4">Shop Name</h1>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
-          </div>
-
+          
+          
+          <%@include file="./shared/sidebar.jsp" %>
         </div>
         <!-- /.col-lg-3 -->
 

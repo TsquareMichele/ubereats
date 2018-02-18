@@ -14,6 +14,13 @@
 	</properties>
 
 	<dependencies>
+		<!-- Link Backend project -->
+		<dependency>
+			<groupId>net.kzn</groupId>
+	<artifactId>ubereatsbackend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+		
+		</dependency>
 
 		<!-- Java EE -->
 

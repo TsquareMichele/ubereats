@@ -14,8 +14,8 @@
    
    <!-- Created a dispatcher-servlet file for creating the bean to resolve the view for every mapping and we are scanning the pakage where controllers could be found  -->
 
-   <context:component-scan base-package="net.kzn.ubereats.controller"></context:component-scan>
-   
+   <context:component-scan base-package="net.kzn.ubereats.controller"/>
+    <context:component-scan base-package="net.kzn.ubereatsbackend.daoimpl"/>
    
    <bean id="viewResolver"
    		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

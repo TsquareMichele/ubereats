@@ -16,12 +16,19 @@
 
   <head>
 
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>${title} - Uber Eats </title>
+    
+    <!-- helps with knowing which page is active -->
+    <script>
+    
+    window.menu='${title}';
+    </script>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/${css}/bootstrap.min.css" rel="stylesheet">
@@ -81,6 +88,13 @@
    </c:if>
    
    
+    <!--Loading List Restaurants Page Content-->
+   	<!-- when user clicks on view Restaurants go to listRestaurants.jsp -->
+   <c:if test="${userClickAllRestaurants==true or userClickCategoryRestaurants==true }">
+   	<%@include file="listRestaurants.jsp"%>
+   </c:if>
+   
+   
     <!-- /.container -->
 
 <!-- Foot comes here -->
@@ -92,7 +106,9 @@
      <script src="${js}/bootstrap.bundle.min.js"></script>
     
     <script src="vendor/bootstrap/${js}/bootstrap.bundle.min.js"></script>
-
+    
+    <!-- Self Coded javaScript -->
+<script src="${js}/myapp.js"></script>
   </body>
 
 </html>
