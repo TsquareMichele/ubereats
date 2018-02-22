@@ -1,15 +1,34 @@
 package net.kzn.ubereatsbackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
 
 	
 	
-	/**Private Fields**/
 	
+	//This toString Method is used for checking purposes and error solving
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
+				+ ", active=" + active + "]";
+	}
+	/**Private Fields**/
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY) //This increments the id number
 	private int id;
 	private String name;
 	private String description;
+	//makes sure it the names correspond to the database
+		@Column(name="image_url")
 	private String imageURL;
+		//makes sure it the names correspond to the database
+		@Column(name="is_active")
 	private boolean active= true;
 	
 	//Getters And Setters for above private fields
@@ -31,6 +50,7 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	public String getImageURL() {
 		return imageURL;
 	}
