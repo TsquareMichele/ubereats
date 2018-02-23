@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
 
@@ -19,17 +21,22 @@ public class Product {
 	private String code;
 	private String name;
 	private String restaurant;
+	//annotation is used so that description is not displayed in json
+	@JsonIgnore
 	private String description;
 	@Column(name="unit_price")
 	private double unitPrice;
 	private int quantity;
 	//makes sure it the names correspond to the database
 			@Column(name="is_active")
+			@JsonIgnore
 		private boolean active= true;
 			//makes sure it the names correspond to the database
 			@Column(name="category_id")
+			@JsonIgnore
 		private int categoryId;
 			@Column(name="restaurant_id")
+			@JsonIgnore
 			private int restaurantId;
 			private int purchases;
 			private int views;

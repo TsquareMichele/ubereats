@@ -106,6 +106,8 @@
      <script src="${js}/bootstrap.bundle.min.js"></script>
     
     <script src="vendor/bootstrap/${js}/bootstrap.bundle.min.js"></script>
+   <!-- DataTable Plugin -->
+    <script src="${js}/jquery.dataTables.js"></script>
     
     <!-- Self Coded javaScript -->
 <script src="${js}/myapp.js"></script>

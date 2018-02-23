@@ -32,7 +32,38 @@ $(function(){
 	
 	}
 	
+	//code for jquery dataTable
+	//create dataset
 	
+	var products = [
+		
+					['1', 'ABC'],	
+					['2', 'ZXC'],
+					['3', 'HJK'],
+					['4', 'YTU'],
+					['5', 'LOH'],
+					['6', 'TYB'],
+					['7', 'POI'],
+					['8', 'RUG']
+	];
+	
+	var $table = $('#productListTable');
+	
+	//EXECUTE THE BELOW CODE ONLY WHERE WE HAVE THIS TABLE
+	
+	if($table.length){
+		
+		
+		//console.log('Inside the table!');
+		
+		$table.DataTable({
+			
+			lengthMenu: [ [3,5,10,-1],['3','5','10','All' ] ],
+			pageLength: 5,
+			data: products
+		});
+		
+	}
 	
 })
 
