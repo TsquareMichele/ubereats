@@ -33,19 +33,18 @@ $(function(){
 	}
 	
 	//code for jquery dataTable
-	//create dataset
+	var jsonUrl='';
 	
-	var products = [
+	if(window.categoryId==''){
 		
-					['1', 'ABC'],	
-					['2', 'ZXC'],
-					['3', 'HJK'],
-					['4', 'YTU'],
-					['5', 'LOH'],
-					['6', 'TYB'],
-					['7', 'POI'],
-					['8', 'RUG']
-	];
+		jsonUrl = window.contextRoot + '/json/data/all/products';
+	}
+	else{
+		
+		jsonUrl = window.contextRoot + '/json/data/category/' + window.categoryId + '/products';
+	}
+		
+
 	
 	var $table = $('#productListTable');
 	
@@ -60,7 +59,71 @@ $(function(){
 			
 			lengthMenu: [ [3,5,10,-1],['3','5','10','All' ] ],
 			pageLength: 5,
-			data: products
+			
+			ajax: {
+				
+				url: jsonUrl,
+				dataSrc:''
+			},
+			
+			
+			columns:[	
+						{
+							
+							data: 'code',
+							mRender: function(data,type,row){
+								
+								return '<img src="'+window.contextRoot+'/resources/images/'+data+'.png" class="dataTableImg"/>';
+								
+							}
+						},
+				
+						{
+							
+							data: 'name'
+						},
+						
+						{
+							
+							data: 'restaurant'
+						},
+						
+						{
+							
+							data: 'description'
+						},
+						
+						{
+							
+							data: 'unitPrice',
+							mRender: function(data,type,row){
+								
+								return 'R'+data
+							}
+							
+						},
+						
+						{
+							
+							data: 'id',
+							bSortable: false,
+							mRender: function(data,type,row){
+								
+								var str=''; 
+								
+								str += '<a href=" '+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="fa fa-eye"></span></a> &#160; <br/>';
+								str += '<a href=" '+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success"><span class="fa fa-cart-arrow-down"></span></a>';
+								
+								return str;
+							} 
+						}	
+						
+						
+						
+						
+				
+						]
+			
 		});
 		
 	}

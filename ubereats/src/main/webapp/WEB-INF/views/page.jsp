@@ -7,6 +7,7 @@
 <spring:url var="css" value="/resources/css"/>
 <spring:url var="js" value="/resources/js"/>
 <spring:url var="images" value="/resources/images"/>
+<spring:url var="fonts" value="/resources/fonts"/>
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 
@@ -24,11 +25,17 @@
 
     <title>${title} - Uber Eats </title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- helps with knowing which page is active -->
     <script>
     
     window.menu='${title}';
+    window.contextRoot = '${contextRoot}';
     </script>
+
+
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/${css}/bootstrap.min.css" rel="stylesheet">
@@ -108,6 +115,8 @@
     <script src="vendor/bootstrap/${js}/bootstrap.bundle.min.js"></script>
    <!-- DataTable Plugin -->
     <script src="${js}/jquery.dataTables.js"></script>
+    <script src="${js}/dataTables.bootstrap.js"></script>
+    
     
     <!-- Self Coded javaScript -->
 <script src="${js}/myapp.js"></script>
