@@ -1,4 +1,5 @@
-<!-- Creating the Namespaces -->
+<!-- Creating the Name spaces -->
+
 <beans xmlns = "http://www.springframework.org/schema/beans"
 	xmlns:context = "http://www.springframework.org/schema/context"
 	xmlns:mvc = "http://www.springframework.org/schema/mvc"
@@ -12,7 +13,7 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
    ">
    
-   <!-- Created a dispatcher-servlet file for creating the bean to resolve the view for every mapping and we are scanning the pakage where controllers could be found  -->
+   <!-- Created a dispatcher servlet file for creating the bean to resolve the view for every mapping and we are scanning the pakage where controllers could be found  -->
 
    <context:component-scan base-package="net.kzn.ubereats.controller"/>
     <context:component-scan base-package="net.kzn.ubereatsbackend"/>

@@ -35,7 +35,7 @@ public class CategoryTestCase {
 		category.setDescription("retaurants");
 		category.setImageURL("CAT_1.png");
 
-		assertEquals("Successfully added a category into the table!", true, categoryDAO.add(category));
+		assertEquals("Something went wrong when adding a category!", true, categoryDAO.add(category));
 
 	}
 	*/
@@ -89,7 +89,7 @@ public class CategoryTestCase {
 		category.setDescription("Description of the Italian restaurant");
 		category.setImageURL("CAT_1.png");
 
-		assertEquals("Successfully added a category into the table!", true, categoryDAO.add(category));
+		assertEquals("Something went wrong when adding a category!", true, categoryDAO.add(category));
 		
 		
 		category = new Category();
@@ -97,26 +97,26 @@ public class CategoryTestCase {
 		category.setDescription("Description of a franchise");
 		category.setImageURL("CAT_2.png");
 
-		assertEquals("Successfully added a category into the table!", true, categoryDAO.add(category));
+		assertEquals("Something went wrong when adding a category into the table!", true, categoryDAO.add(category));
 		
 		//fetching and updating the category
 		
 category = categoryDAO.get(2);
 		
 		category.setName("Italy");
-		assertEquals("Successfully updated  a single category in the table!", true, categoryDAO.update(category));
+		assertEquals("Something went wrong when updating  a single category in the table!", true, categoryDAO.update(category));
 	
 		//delete a category
 		
 	category = categoryDAO.get(1);
 		
 		
-		assertEquals("Successfully deleted a single category in the table!", true, categoryDAO.delete(category));
+		assertEquals("Something went wrong when deleting a single category in the table!", true, categoryDAO.delete(category));
 	
 		
 		//fetching the list
 		
-		assertEquals("Successfully fetched a list of categories from the table!", 1 , categoryDAO.list().size());
+		assertEquals("Something went wrong when fetching a list of categories from the table!", 1 , categoryDAO.list().size());
 		
 		
 		

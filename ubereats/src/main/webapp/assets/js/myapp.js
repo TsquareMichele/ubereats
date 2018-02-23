@@ -25,6 +25,7 @@ $(function(){
 		
 		
 	default:
+		if(menu=="Home") break;	
 		$('#listRestaurants').addClass('active');
 		$('#a_'+menu).addClass('active');
 		break;
