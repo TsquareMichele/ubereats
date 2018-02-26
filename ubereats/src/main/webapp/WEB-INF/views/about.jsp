@@ -6,7 +6,10 @@
             <br/>
                 <h1>About Uber Eats</h1>
                 <p class="author"><strong>Food Delivery at the tap of a button</strong><span class="text-muted"> </span></p>
-                <img class="img-thumbnail" src="${images}/logo.svg">
+                
+                <video width="320" height="240" autoplay>
+ 						<source src="${images}/animation.mp4" type="video/mp4">
+				</video>
                 
             </div>
             <div class="col-md-6 col-md-offset-0 post-body">
